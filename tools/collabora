@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Installation of Collabora Online
+
+# Installation of Docker from Official Ubuntu Repository
+
+sudo apt-get update && sudo apt-get install docker.io -y
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Pull request of Collabora/code from Docker repositoy
+
+sudo docker pull collabora/code
+
+# Modify the domain name cloud.exemple.com by a new one before executing this script
+
+sudo docker run -t -d -p 127.0.0.1:9980:9980 -e 'domain=cloud\\.example\\.com' --restart always --cap-add MKNOD collabora/code
+
+# In Nextcloud Admin panel, install COllabora Online app.
+# In Nextcloud Admin "Collabora Online setting", write the domain name like : https://cloud.exemple.com
+# ... and click "Apply". 
+# Sometimes we need to reboot. Voilà!
