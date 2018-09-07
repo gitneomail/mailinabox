@@ -23,8 +23,8 @@ listening-ip=222.222.222.222 # Need to be the IP of the server
 listening-ip=127.0.0.1
 listening-ip=localhost
 relay-ip=222.222.222.222 # Need to be the IP of the server
-cert=/etc/letsencrypt/live/cloud.exemple.com/fullchain.pem # Change "cloud.exemple.com" by your domain
-pkey=/etc/letsencrypt/live/cloud.exemple.com/privkey.pem # Change "cloud.exemple.com" by your domain
+cert=/home/user-data/ssl/ssl_certificate.pem
+pkey=/home/user-data/ssl/ssl_private_key.pem
 no-tlsv1
 no-tlsv1_1
 cipher-list="ECDH+AESGCM:DH+AESGCM" # Personal choice. Change as needed!
