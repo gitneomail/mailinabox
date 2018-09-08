@@ -51,7 +51,7 @@ sudo ufw allow 5349
 
 # Install the Talk app in Nextcloud Admin Panel
 
-# At the Talk main setting panel for STUN and TURN server : cloud.exemple.ca:5349
+# At the Talk main setting panel for STUN and TURN server : cloud.exemple.com:5349
 # Add your secret key and select "UDP and TCP".  
 # Voilà! Have fun!
 
